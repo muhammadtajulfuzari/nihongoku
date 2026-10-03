@@ -556,6 +556,148 @@ const tahunVocabulary = [
     { japanese: "去年", romaji: "kyonen", meaning: "tahun lalu" }
 ];
 
+const transportasiVocabulary = [
+    { japanese: "交通", romaji: "koutsuu", meaning: "transportasi" },
+    { japanese: "車", romaji: "kuruma", meaning: "mobil" },
+    { japanese: "自動車", romaji: "jidousha", meaning: "mobil" },
+    { japanese: "バス", romaji: "basu", meaning: "bus" },
+    { japanese: "電車", romaji: "densha", meaning: "kereta listrik" },
+    { japanese: "新幹線", romaji: "shinkansen", meaning: "kereta api cepat" },
+    { japanese: "電車", romaji: "densha", meaning: "kereta api" },
+    { japanese: "地下鉄", romaji: "chikatetsu", meaning: "kereta bawah tanah" },
+    { japanese: "タクシー", romaji: "takushii", meaning: "taksi" },
+    { japanese: "飛行機", romaji: "hikouki", meaning: "pesawat" },
+    { japanese: "船", romaji: "fune", meaning: "kapal" },
+    { japanese: "自転車", romaji: "jitensha", meaning: "sepeda" },
+    { japanese: "バイク", romaji: "baiku", meaning: "sepeda motor" },
+    { japanese: "オートバイ", romaji: "outebai", meaning: "sepeda motor" },
+    { japanese: "歩く", romaji: "aruku", meaning: "berjalan kaki" },
+    { japanese: "乗る", romaji: "noru", meaning: "naik / menaiki" },
+    { japanese: "降りる", romaji: "oriru", meaning: "turun / turun dari kendaraan" },
+    { japanese: "運転する", romaji: "unten suru", meaning: "mengemudi" },
+    { japanese: "運転手", romaji: "untenshu", meaning: "supir" },
+    { japanese: "ドライバー", romaji: "doraibaa", meaning: "pengemudi" },
+    { japanese: "駐車場", romaji: "chuushajou", meaning: "tempat parkir" },
+    { japanese: "停車", romaji: "teisha", meaning: "berhenti" },
+    { japanese: "道路", romaji: "douro", meaning: "jalan raya" },
+    { japanese: "駅", romaji: "eki", meaning: "stasiun" },
+    { japanese: "駅員", romaji: "ekiin", meaning: "petugas stasiun" },
+    { japanese: "バス停", romaji: "basutei", meaning: "halte bus" },
+    { japanese: "駅舎", romaji: "ekisha", meaning: "gedung stasiun" },
+    { japanese: "乗り換え", romaji: "norikae", meaning: "berpindah kendaraan" },
+    { japanese: "乗り場", romaji: "noriba", meaning: "tempat naik" },
+    { japanese: "降り場", romaji: "oriba", meaning: "tempat turun" },
+    { japanese: "切符", romaji: "kippu", meaning: "tiket" },
+    { japanese: "定期券", romaji: "teikiken", meaning: "kartu langganan / tiket rutin" },
+    { japanese: "料金", romaji: "ryoukin", meaning: "biaya / tarif" },
+    { japanese: "運賃", romaji: "unchin", meaning: "ongkos transportasi" },
+    { japanese: "時間", romaji: "jikan", meaning: "waktu" },
+    { japanese: "遅れる", romaji: "okureru", meaning: "terlambat" },
+    { japanese: "急ぐ", romaji: "isogu", meaning: "tergesa-gesa" },
+    { japanese: "道", romaji: "michi", meaning: "jalan" },
+    { japanese: "渋滞", romaji: "joutai", meaning: "kemacetan" },
+    { japanese: "交通ルール", romaji: "koutsuu ruuru", meaning: "aturan lalu lintas" },
+    { japanese: "安全", romaji: "anzen", meaning: "aman" },
+    { japanese: "信号", romaji: "shingou", meaning: "lampu lalu lintas" },
+    { japanese: "空港", romaji: "kuukou", meaning: "bandara" },
+    { japanese: "港", romaji: "minato", meaning: "pelabuhan" },
+    { japanese: "ターミナル", romaji: "taaminaru", meaning: "terminal" },
+    { japanese: "公共交通機関", romaji: "koukyou koutsuu kikan", meaning: "transportasi umum" },
+    { japanese: "私の車", romaji: "watashi no kuruma", meaning: "mobil pribadi saya" },
+    { japanese: "自家用車", romaji: "jikayousha", meaning: "kendaraan pribadi" },
+    { japanese: "送迎", romaji: "sougei", meaning: "antar-jemput" },
+    { japanese: "通勤", romaji: "tsuukin", meaning: "pergi kerja" },
+    { japanese: "通学", romaji: "tsuugaku", meaning: "pergi sekolah" },
+    { japanese: "帰宅", romaji: "kitaku", meaning: "pulang ke rumah" },
+    { japanese: "徒歩", romaji: "toho", meaning: "jalan kaki" }
+];
+
+const n4N5Vocabulary = [
+    { japanese: "学校", romaji: "gakkou", meaning: "sekolah" },
+    { japanese: "教室", romaji: "kyoushitsu", meaning: "ruang kelas" },
+    { japanese: "先生", romaji: "sensei", meaning: "guru / dosen" },
+    { japanese: "学生", romaji: "gakusei", meaning: "pelajar" },
+    { japanese: "授業", romaji: "jugyou", meaning: "pelajaran" },
+    { japanese: "宿題", romaji: "shukudai", meaning: "pekerjaan rumah" },
+    { japanese: "試験", romaji: "shiken", meaning: "ujian" },
+    { japanese: "結果", romaji: "kekka", meaning: "hasil" },
+    { japanese: "発表", romaji: "happyou", meaning: "presentasi" },
+    { japanese: "質問", romaji: "shitsumon", meaning: "pertanyaan" },
+    { japanese: "回答", romaji: "kaitou", meaning: "jawaban" },
+    { japanese: "説明", romaji: "setsumei", meaning: "penjelasan" },
+    { japanese: "注意", romaji: "chui", meaning: "perhatian" },
+    { japanese: "安全", romaji: "anzen", meaning: "aman" },
+    { japanese: "危険", romaji: "kiken", meaning: "bahaya" },
+    { japanese: "問題", romaji: "mondai", meaning: "soal / masalah" },
+    { japanese: "準備", romaji: "junbi", meaning: "persiapan" },
+    { japanese: "開始", romaji: "kaishi", meaning: "mulai" },
+    { japanese: "終了", romaji: "shuuryou", meaning: "selesai" },
+    { japanese: "報告", romaji: "houkoku", meaning: "laporan" },
+    { japanese: "連絡", romaji: "renraku", meaning: "kontak / hubungi" },
+    { japanese: "相談", romaji: "soudan", meaning: "konsultasi" },
+    { japanese: "経験", romaji: "keiken", meaning: "pengalaman" },
+    { japanese: "研究", romaji: "kenkyuu", meaning: "penelitian" },
+    { japanese: "地図", romaji: "chizu", meaning: "peta" },
+    { japanese: "天気", romaji: "tenki", meaning: "cuaca" },
+    { japanese: "晴れ", romaji: "hare", meaning: "cerah" },
+    { japanese: "曇り", romaji: "kumori", meaning: "berawan" },
+    { japanese: "海岸", romaji: "kaigan", meaning: "pantai" },
+    { japanese: "道路", romaji: "douro", meaning: "jalan raya" },
+    { japanese: "信号", romaji: "shingou", meaning: "lampu lalu lintas" },
+    { japanese: "会社", romaji: "kaisha", meaning: "perusahaan" },
+    { japanese: "出勤", romaji: "shukkin", meaning: "masuk kerja" },
+    { japanese: "退勤", romaji: "taikin", meaning: "pulang kerja" },
+    { japanese: "遅刻", romaji: "chikoku", meaning: "terlambat" },
+    { japanese: "欠席", romaji: "kesseki", meaning: "absen" },
+    { japanese: "会議", romaji: "kaigi", meaning: "rapat" },
+    { japanese: "給料", romaji: "kyuuryou", meaning: "gaji" },
+    { japanese: "収入", romaji: "shuunyuu", meaning: "pendapatan" },
+    { japanese: "支出", romaji: "shishutsu", meaning: "pengeluaran" },
+    { japanese: "貯金", romaji: "chokin", meaning: "menabung" },
+    { japanese: "生活", romaji: "seikatsu", meaning: "kehidupan sehari-hari" },
+    { japanese: "健康", romaji: "kenkou", meaning: "kesehatan" },
+    { japanese: "病気", romaji: "byouki", meaning: "sakit" },
+    { japanese: "気持ち", romaji: "kimochi", meaning: "perasaan" },
+    { japanese: "感謝", romaji: "kansha", meaning: "syukur" },
+    { japanese: "ありがとう", romaji: "arigatou", meaning: "terima kasih" },
+    { japanese: "ごめんなさい", romaji: "gomen nasai", meaning: "maaf" },
+    { japanese: "お願い", romaji: "onegai", meaning: "permohonan" },
+    { japanese: "家族", romaji: "kazoku", meaning: "keluarga" },
+    { japanese: "子供", romaji: "kodomo", meaning: "anak" },
+    { japanese: "大人", romaji: "otona", meaning: "dewasa" },
+    { japanese: "兄弟", romaji: "kyoudai", meaning: "saudara" },
+    { japanese: "両親", romaji: "ryoushin", meaning: "orang tua" },
+    { japanese: "料理", romaji: "ryouri", meaning: "memasak" },
+    { japanese: "野菜", romaji: "yasai", meaning: "sayur" },
+    { japanese: "果物", romaji: "kudamono", meaning: "buah" },
+    { japanese: "牛乳", romaji: "gyuunyuu", meaning: "susu" },
+    { japanese: "お菓子", romaji: "okashi", meaning: "camilan" },
+    { japanese: "写真", romaji: "shashin", meaning: "foto" },
+    { japanese: "鍵", romaji: "kagi", meaning: "kunci" },
+    { japanese: "財布", romaji: "saifu", meaning: "dompet" },
+    { japanese: "掃除", romaji: "souji", meaning: "membersihkan" },
+    { japanese: "洗濯", romaji: "sentaku", meaning: "mencuci" },
+    { japanese: "電気", romaji: "denki", meaning: "listrik" },
+    { japanese: "新聞", romaji: "shinbun", meaning: "koran" },
+    { japanese: "便利", romaji: "benri", meaning: "praktis / nyaman" },
+    { japanese: "不便", romaji: "fuben", meaning: "tidak nyaman" },
+    { japanese: "部屋", romaji: "heya", meaning: "ruangan" },
+    { japanese: "机", romaji: "tsukue", meaning: "meja" },
+    { japanese: "椅子", romaji: "isu", meaning: "kursi" },
+    { japanese: "窓", romaji: "mado", meaning: "jendela" },
+    { japanese: "ドア", romaji: "doa", meaning: "pintu" },
+    { japanese: "音楽", romaji: "ongaku", meaning: "musik" },
+    { japanese: "映画", romaji: "eiga", meaning: "film" },
+    { japanese: "旅行", romaji: "ryokou", meaning: "perjalanan" },
+    { japanese: "新しい", romaji: "atarashii", meaning: "baru" },
+    { japanese: "古い", romaji: "furui", meaning: "lama" },
+    { japanese: "大切", romaji: "taisetsu", meaning: "penting" },
+    { japanese: "大変", romaji: "taihen", meaning: "sulit / berat" },
+    { japanese: "元気", romaji: "genki", meaning: "semangat / sehat" },
+    { japanese: "忙しい", romaji: "isogashii", meaning: "sibuk" },
+    { japanese: "楽しい", romaji: "tanoshii", meaning: "menyenangkan" }
+];
+
 const bonusVocabulary = [
     { japanese: "勉強", romaji: "benkyou", meaning: "belajar" },
     { japanese: "忙しい", romaji: "isogashii", meaning: "sibuk" },
@@ -594,7 +736,138 @@ const bonusVocabulary = [
     { japanese: "売る", romaji: "uru", meaning: "menjual" },
     { japanese: "教える", romaji: "oshieru", meaning: "mengajar" },
     { japanese: "笑う", romaji: "warau", meaning: "tertawa" },
-    { japanese: "泣く", romaji: "naku", meaning: "menangis" }
+    { japanese: "泣く", romaji: "naku", meaning: "menangis" },
+    { japanese: "親", romaji: "oya", meaning: "orang tua" },
+    { japanese: "父", romaji: "chichi / otousan", meaning: "ayah" },
+    { japanese: "母", romaji: "haha / okaasan", meaning: "ibu" },
+    { japanese: "両親", romaji: "ryoushin", meaning: "orang tua" },
+    { japanese: "お父さん", romaji: "otousan", meaning: "ayah" },
+    { japanese: "お母さん", romaji: "okaasan", meaning: "ibu" },
+    { japanese: "家族", romaji: "kazoku", meaning: "keluarga" },
+    { japanese: "兄", romaji: "ani", meaning: "kakak laki-laki" },
+    { japanese: "姉", romaji: "ane", meaning: "kakak perempuan" },
+    { japanese: "弟", romaji: "otouto", meaning: "adik laki-laki" },
+    { japanese: "妹", romaji: "imouto", meaning: "adik perempuan" },
+    { japanese: "兄弟", romaji: "kyoudai", meaning: "saudara" },
+    { japanese: "姉妹", romaji: "shimai", meaning: "saudara perempuan" },
+    { japanese: "祖父", romaji: "sofu", meaning: "kakek" },
+    { japanese: "祖母", romaji: "sobo", meaning: "nenek" },
+    { japanese: "叔父", romaji: "oji", meaning: "paman" },
+    { japanese: "叔母", romaji: "oba", meaning: "bibi" },
+    { japanese: "おじさん", romaji: "ojisan", meaning: "paman" },
+    { japanese: "おばさん", romaji: "obasan", meaning: "bibi" },
+    { japanese: "子供", romaji: "kodomo", meaning: "anak" },
+    { japanese: "息子", romaji: "musuko", meaning: "putra" },
+    { japanese: "娘", romaji: "musume", meaning: "putri" },
+    { japanese: "夫", romaji: "otto", meaning: "suami" },
+    { japanese: "妻", romaji: "tsuma", meaning: "istri" },
+    { japanese: "配偶者", romaji: "haigousha", meaning: "pasangan" },
+    { japanese: "親戚", romaji: "shinseki", meaning: "kerabat" },
+    { japanese: "いとこ", romaji: "itoko", meaning: "sepupu" },
+    { japanese: "近所", romaji: "kinjo", meaning: "lingkungan sekitar / tetangga" },
+    { japanese: "隣人", romaji: "rinjin", meaning: "tetangga" },
+    { japanese: "同居人", romaji: "doukyonin", meaning: "penghuni rumah" },
+    { japanese: "家", romaji: "ie", meaning: "rumah" },
+    { japanese: "部屋", romaji: "heya", meaning: "ruangan" },
+    { japanese: "住む", romaji: "sumu", meaning: "tinggal" },
+    { japanese: "育つ", romaji: "sodatsu", meaning: "tumbuh / dibesarkan" },
+    { japanese: "面倒を見る", romaji: "mentouru miru", meaning: "mengurus" },
+    { japanese: "大人", romaji: "otona", meaning: "orang dewasa" },
+    { japanese: "子ども", romaji: "kodomo", meaning: "anak-anak" },
+    { japanese: "家族旅行", romaji: "kazoku ryokou", meaning: "liburan keluarga" },
+    { japanese: "お祝い", romaji: "iwai", meaning: "selamat / perayaan" },
+    { japanese: "感謝", romaji: "kansha", meaning: "syukur" },
+    { japanese: "支える", romaji: "sasaeru", meaning: "menopang / mendukung" },
+    { japanese: "守る", romaji: "mamoru", meaning: "melindungi" },
+    { japanese: "職業", romaji: "shokugyou", meaning: "pekerjaan / profesi" },
+    { japanese: "仕事", romaji: "shigoto", meaning: "pekerjaan" },
+    { japanese: "会社", romaji: "kaisha", meaning: "perusahaan" },
+    { japanese: "会社員", romaji: "kaishain", meaning: "karyawan perusahaan" },
+    { japanese: "先生", romaji: "sensei", meaning: "guru / dosen" },
+    { japanese: "医者", romaji: "isha", meaning: "dokter" },
+    { japanese: "看護師", romaji: "kangoshi", meaning: "perawat" },
+    { japanese: "先生", romaji: "sensei", meaning: "guru / dosen" },
+    { japanese: "教師", romaji: "kyoushi", meaning: "pengajar" },
+    { japanese: "学生", romaji: "gakusei", meaning: "pelajar" },
+    { japanese: "営業", romaji: "eigyou", meaning: "penjualan / pemasaran" },
+    { japanese: "店員", romaji: "tenin", meaning: "pegawai toko" },
+    { japanese: "料理人", romaji: "ryourinin", meaning: "koki" },
+    { japanese: "運転手", romaji: "untenshu", meaning: "supir" },
+    { japanese: "警察官", romaji: "keisatsukan", meaning: "polisi" },
+    { japanese: "消防士", romaji: "shouboushi", meaning: "petugas pemadam kebakaran" },
+    { japanese: "技術者", romaji: "gijutsusha", meaning: "teknisi / teknisi profesional" },
+    { japanese: "設計者", romaji: "sekkeisha", meaning: "desainer / perancang" },
+    { japanese: "プログラマー", romaji: "pureguramaa", meaning: "programmer" },
+    { japanese: "エンジニア", romaji: "enjinia", meaning: "insinyur" },
+    { japanese: "デザイナー", romaji: "dezainaa", meaning: "desainer" },
+    { japanese: "事務員", romaji: "jimuin", meaning: "staf administrasi" },
+    { japanese: "秘書", romaji: "hisho", meaning: "sekretaris" },
+    { japanese: "経営者", romaji: "keieisha", meaning: "pemilik usaha / pengusaha" },
+    { japanese: "会社員", romaji: "kaishain", meaning: "karyawan perusahaan" },
+    { japanese: "職員", romaji: "shokuin", meaning: "pegawai" },
+    { japanese: "主任", romaji: "shunin", meaning: "kepala / supervisor" },
+    { japanese: "部長", romaji: "buchou", meaning: "kepala bagian" },
+    { japanese: "課長", romaji: "kachou", meaning: "kepala seksi" },
+    { japanese: "社長", romaji: "shachou", meaning: "direktur utama" },
+    { japanese: "会議", romaji: "kaigi", meaning: "rapat" },
+    { japanese: "ミーティング", romaji: "miitingu", meaning: "pertemuan" },
+    { japanese: "報告", romaji: "houkoku", meaning: "laporan" },
+    { japanese: "連絡", romaji: "renraku", meaning: "hubungan / kontak" },
+    { japanese: "相談", romaji: "soudan", meaning: "konsultasi" },
+    { japanese: "質問", romaji: "shitsumon", meaning: "pertanyaan" },
+    { japanese: "回答", romaji: "kaitou", meaning: "jawaban" },
+    { japanese: "申請", romaji: "shinsei", meaning: "permohonan" },
+    { japanese: "承認", romaji: "shounin", meaning: "persetujuan" },
+    { japanese: "更新", romaji: "koushin", meaning: "pembaruan" },
+    { japanese: "準備", romaji: "junbi", meaning: "persiapan" },
+    { japanese: "開始", romaji: "kaishi", meaning: "mulai" },
+    { japanese: "終了", romaji: "shuuryou", meaning: "selesai" },
+    { japanese: "休憩", romaji: "kyukei", meaning: "istirahat" },
+    { japanese: "出勤", romaji: "shukkin", meaning: "masuk kerja" },
+    { japanese: "退勤", romaji: "taikin", meaning: "pulang kerja" },
+    { japanese: "残業", romaji: "zangyou", meaning: "lembur" },
+    { japanese: "給料", romaji: "kyuuryou", meaning: "gaji" },
+    { japanese: "手当", romaji: "teate", meaning: "tunjangan" },
+    { japanese: "ボーナス", romaji: "boonasu", meaning: "bonus" },
+    { japanese: "契約", romaji: "keiyaku", meaning: "kontrak" },
+    { japanese: "雇用", romaji: "koyou", meaning: "pekerjaan / tenaga kerja" },
+    { japanese: "職場", romaji: "shokuba", meaning: "tempat kerja" },
+    { japanese: "オフィス", romaji: "ofisu", meaning: "kantor" },
+    { japanese: "事務所", romaji: "jimusho", meaning: "kantor / biro" },
+    { japanese: "工場", romaji: "koujou", meaning: "pabrik" },
+    { japanese: "倉庫", romaji: "souko", meaning: "gudang" },
+    { japanese: "販売", romaji: "hanbai", meaning: "penjualan" },
+    { japanese: "仕入れ", romaji: "shiire", meaning: "pembelian / pembelian stok" },
+    { japanese: "在庫", romaji: "zaiko", meaning: "stok" },
+    { japanese: "配送", romaji: "haisou", meaning: "pengiriman" },
+    { japanese: "業務", romaji: "gyoumu", meaning: "tugas kerja" },
+    { japanese: "作業", romaji: "sagyou", meaning: "pekerjaan / aktivitas kerja" },
+    { japanese: "仕事場", romaji: "shigoto ba", meaning: "tempat kerja" },
+    { japanese: "ハンドル", romaji: "handoru", meaning: "pegangan / menangani" },
+    { japanese: "スケジュール", romaji: "sukejuuru", meaning: "jadwal" },
+    { japanese: "進む", romaji: "susumu", meaning: "maju / berjalan" },
+    { japanese: "遅れる", romaji: "okureru", meaning: "terlambat" },
+    { japanese: "効率", romaji: "kouritsu", meaning: "efisiensi" },
+    { japanese: "時間管理", romaji: "jikan kanri", meaning: "manajemen waktu" },
+    { japanese: "集中", romaji: "shuuchuu", meaning: "konsentrasi" },
+    { japanese: "努力", romaji: "doryoku", meaning: "usaha" },
+    { japanese: "責任", romaji: "sekinin", meaning: "tanggung jawab" },
+    { japanese: "義務", romaji: "gimu", meaning: "kewajiban" },
+    { japanese: "経験", romaji: "keiken", meaning: "pengalaman" },
+    { japanese: "技能", romaji: "ginou", meaning: "keterampilan" },
+    { japanese: "専門家", romaji: "senmonka", meaning: "ahli" },
+    { japanese: "研修", romaji: "kenshuu", meaning: "pelatihan" },
+    { japanese: "教育", romaji: "kyouiku", meaning: "pendidikan" },
+    { japanese: "資格", romaji: "shikaku", meaning: "sertifikat / kualifikasi" },
+    { japanese: "面接", romaji: "mensetsu", meaning: "wawancara" },
+    { japanese: "採用", romaji: "saiyou", meaning: "rekrutmen" },
+    { japanese: "転職", romaji: "tenshoku", meaning: "berpindah kerja" },
+    { japanese: "退職", romaji: "taishoku", meaning: "mengundurkan diri / pensiun" },
+    { japanese: "労働", romaji: "roudou", meaning: "pekerjaan / tenaga kerja" },
+    { japanese: "幸福", romaji: "koufuku", meaning: "kebahagiaan" },
+    { japanese: "キャリア", romaji: "kyaria", meaning: "karier" },
+    { japanese: "目標", romaji: "mokuhyou", meaning: "target" },
+    { japanese: "達成", romaji: "tassei", meaning: "pencapaian" }
 ];
 
 function normalizeVocabularyKey(item) {
@@ -616,16 +889,43 @@ function deduplicateVocabularyEntries(items) {
     });
 }
 
+function normalizeKanjiKey(item) {
+    return `${String(item.char || "").trim().toLowerCase()}|${String(item.read || "").trim().toLowerCase()}|${String(item.meaning || "").trim().toLowerCase()}|${String(item.level || "").trim().toLowerCase()}`;
+}
+
+function deduplicateKanjiEntries(items) {
+    const seen = new Set();
+
+    return items.filter(item => {
+        if (!item || !item.char) {
+            return false;
+        }
+
+        const key = normalizeKanjiKey(item);
+
+        if (seen.has(key)) {
+            return false;
+        }
+
+        seen.add(key);
+        return true;
+    });
+}
+
 const uniqueAngkaVocabulary = deduplicateVocabularyEntries(angkaVocabulary);
 const uniqueBulanVocabulary = deduplicateVocabularyEntries(bulanVocabulary);
 const uniqueTahunVocabulary = deduplicateVocabularyEntries(tahunVocabulary);
+const uniqueTransportasiVocabulary = deduplicateVocabularyEntries(transportasiVocabulary);
 const uniqueVocabulary = deduplicateVocabularyEntries(vocabulary);
+const uniqueN4N5Vocabulary = deduplicateVocabularyEntries(n4N5Vocabulary);
 const uniqueBonusVocabulary = deduplicateVocabularyEntries(bonusVocabulary);
 
 const vocabularySections = [
     { title: "Angka", items: uniqueAngkaVocabulary },
     { title: "Bulan", items: uniqueBulanVocabulary },
     { title: "Tahun", items: uniqueTahunVocabulary },
+    { title: "Transportasi Umum & Pribadi", items: uniqueTransportasiVocabulary },
+    { title: "Kosakata N4 / N5", items: uniqueN4N5Vocabulary },
     { title: "Kosakata Umum", items: uniqueVocabulary },
     { title: "Kosakata Tambahan", items: uniqueBonusVocabulary }
 ];
@@ -1254,10 +1554,11 @@ const mergedKanjiData = [...kanjiData, ...extraKanjiVocabulary.map(([char, read,
 kanjiData.push(...mergedKanjiData.slice(kanjiData.length));
 
 function deduplicateKanjiData() {
+    const cleaned = deduplicateKanjiEntries(kanjiData);
     const unique = new Map();
     const levelPriority = { N5: 3, N4: 2, N3: 1 };
 
-    kanjiData.forEach(item => {
+    cleaned.forEach(item => {
         if (!item || !item.char) {
             return;
         }
@@ -1320,11 +1621,14 @@ let appData = {
 };
 
 
+const QUIZ_PER_DAY = 20;
+
 let quizState = {
     current: 0,
     score: 0,
     questions: [],
-    answered: false
+    answered: false,
+    totalQuestions: QUIZ_PER_DAY
 };
 
 
@@ -2654,13 +2958,14 @@ function displayQuestion() {
         .textContent = question.char;
 
 
+    const totalQuestions = Math.max(1, quizState.totalQuestions || quizState.questions.length || QUIZ_PER_DAY);
+
     document.getElementById("questionNumber")
-        .textContent =
-        quizState.current + 1;
+        .textContent = `${quizState.current + 1} / ${totalQuestions}`;
 
 
     const progress =
-        ((quizState.current) / 5) * 100;
+        ((quizState.current) / totalQuestions) * 100;
 
 
     document
@@ -2769,7 +3074,8 @@ function checkAnswer(button, answer) {
         appData.xp += 10;
 
         appData.correct++;
-        appData.progress.quiz = Math.min(100, Math.max(appData.progress.quiz || 0, ((quizState.current + 1) / 5) * 100));
+        const totalQuestions = Math.max(1, quizState.totalQuestions || quizState.questions.length || QUIZ_PER_DAY);
+        appData.progress.quiz = Math.min(100, Math.max(appData.progress.quiz || 0, ((quizState.current + 1) / totalQuestions) * 100));
 
     }
 
@@ -2835,8 +3141,10 @@ function finishQuiz() {
         .textContent = "🎉";
 
 
+    const totalQuestions = Math.max(1, quizState.totalQuestions || quizState.questions.length || QUIZ_PER_DAY);
+
     document.getElementById("questionNumber")
-        .textContent = "5";
+        .textContent = `${totalQuestions}`;
 
 
     document.getElementById("quizProgressBar")
