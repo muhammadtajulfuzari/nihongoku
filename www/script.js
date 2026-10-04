@@ -2752,8 +2752,8 @@ const monthlyQuizTemplates = [
     { char: "む", answer: "mu", options: ["mu", "ma", "mi", "me"] },
     { char: "め", answer: "me", options: ["me", "ma", "mi", "mu"] },
     { char: "も", answer: "mo", options: ["mo", "ma", "mi", "mu"] },
-    { char: "や", answer: "ya", options: ["ya", "yu", "yo", "ya"] },
-    { char: "ゆ", answer: "yu", options: ["ya", "yu", "yo", "yo"] },
+    { char: "や", answer: "ya", options: ["ya", "yu", "yo", "wa"] },
+    { char: "ゆ", answer: "yu", options: ["ya", "yu", "yo", "wa"] },
     { char: "よ", answer: "yo", options: ["ya", "yu", "yo", "yoo"] },
     { char: "ら", answer: "ra", options: ["ra", "ri", "ru", "re"] },
     { char: "り", answer: "ri", options: ["ra", "ri", "ru", "re"] },
@@ -2786,7 +2786,7 @@ const monthlyQuizTemplates = [
     { char: "4", answer: "yon", options: ["yon", "go", "ku", "ichi"] },
     { char: "5", answer: "go", options: ["go", "yon", "roku", "ku"] },
     { char: "6", answer: "roku", options: ["roku", "go", "ni", "san"] },
-    { char: "7", answer: "nana", options: ["nana", "hachi", "kuro", "go"] },
+    { char: "7", answer: "nana", options: ["nana", "hachi", "roku", "go"] },
     { char: "8", answer: "hachi", options: ["hachi", "ichi", "ni", "go"] },
     { char: "9", answer: "kyuu", options: ["kyuu", "roku", "hachi", "go"] },
     { char: "10", answer: "juu", options: ["juu", "ichi", "go", "roku"] },
@@ -2883,7 +2883,7 @@ function startQuiz() {
 
 
     quizState.questions =
-        shuffle(quizData).slice(0, 5);
+        shuffle(quizData).slice(0, QUIZ_PER_DAY);
 
 
     updateStats();
