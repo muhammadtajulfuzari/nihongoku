@@ -2408,36 +2408,12 @@ function speakCharacter() {
         return;
     }
 
-
-    if (!("speechSynthesis" in window)) {
-
-        alert("Browser kamu tidak mendukung text-to-speech.");
-
-        return;
-    }
-
-
     const text =
         selectedCharacter.char;
 
-
-    const speech =
-        new SpeechSynthesisUtterance(text);
-
-
-    speech.lang = "ja-JP";
-
-    speech.rate = 0.8;
-
-    speech.pitch = 1;
-
-
-    window.speechSynthesis.cancel();
-
-    window.speechSynthesis.speak(speech);
+    bicaraJepang(text, 0.8);
 
 }
-
 
 /* Close modal when clicking outside */
 
@@ -2669,25 +2645,7 @@ function showKanjiView(viewName) {
 
 function speakWord(word) {
 
-    if (!("speechSynthesis" in window)) {
-
-        alert("Browser kamu tidak mendukung audio.");
-
-        return;
-    }
-
-
-    const speech =
-        new SpeechSynthesisUtterance(word);
-
-
-    speech.lang = "ja-JP";
-
-    speech.rate = 0.8;
-
-    window.speechSynthesis.cancel();
-
-    window.speechSynthesis.speak(speech);
+    bicaraJepang(word, 0.8);
 
 }
 
@@ -3320,3 +3278,36 @@ function initializeApp() {
 
 
 initializeApp();
+
+function bicaraJepang(teks, kecepatan) {
+  var rate = kecepatan || 0.9;
+  var cap = window.Capacitor;
+  var TTS = cap && cap.isNativePlatform && cap.isNativePlatform() &&
+            cap.Plugins && cap.Plugins.TextToSpeech;
+
+  // Aplikasi Android (Capacitor)
+  if (TTS) {
+    TTS.speak({
+      text: teks,
+      lang: "ja-JP",
+      rate: rate,
+      pitch: 1.0,
+      volume: 1.0
+    }).catch(function (e) {
+      alert("Suara gagal diputar: " + (e && e.message ? e.message : e));
+    });
+    return;
+  }
+
+  // Browser biasa
+  if (!("speechSynthesis" in window)) {
+    alert("Browser kamu tidak mendukung text-to-speech.");
+    return;
+  }
+  var u = new SpeechSynthesisUtterance(teks);
+  u.lang = "ja-JP";
+  u.rate = rate;
+  u.pitch = 1;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(u);
+}

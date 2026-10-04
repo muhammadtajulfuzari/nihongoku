@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/muhammadtajulfuzari/nihongoku#readme",
   "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
     "@capacitor/android": "^8.5.2",
     "@capacitor/cli": "^8.5.2",
     "@capacitor/core": "^8.5.2"
