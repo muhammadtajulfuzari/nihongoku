@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NihongoKu adalah aplikasi belajar bahasa Jepang yang membantu mempelajari hiragana, katakana, kanji, kosakata, dan quiz."
+    />
+    <meta property="og:url" content="https://www.nihongoku.com" />
+    <meta property="og:title" content="NihongoKu - Belajar Bahasa Jepang" />
+    <title>NihongoKu - Belajar Bahasa Jepang</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Sidebar navigasi">
+        <div class="logo">
+          <div class="logo-icon" aria-label="Logo NihongoKu"><span class="logo-mark">N</span></div>
+          <div>
+            <h2>NihongoKu</h2>
+            <span>LearningJapan</span>
+          </div>
+        </div>
+
+        <nav class="navigation" aria-label="Navigasi utama">
+          <button type="button" class="nav-item active" data-page="dashboard">
+            <span aria-hidden="true">🏠</span>
+            <span>Dashboard</span>
+          </button>
+
+          <button type="button" class="nav-item" data-page="hiragana">
+            <span aria-hidden="true">あ</span>
+            <span>Hiragana</span>
+          </button>
+
+          <button type="button" class="nav-item" data-page="katakana">
+            <span aria-hidden="true">カ</span>
+            <span>Katakana</span>
+          </button>
+
+          <button type="button" class="nav-item" data-page="kanji">
+            <span aria-hidden="true">漢</span>
+            <span>Kanji</span>
+          </button>
+
+          <button type="button" class="nav-item" data-page="vocabulary">
+            <span aria-hidden="true">📚</span>
+            <span>Kosakata</span>
+          </button>
+
+          <button type="button" class="nav-item" data-page="quiz">
+            <span aria-hidden="true">🎯</span>
+            <span>Quiz</span>
+          </button>
+
+          <button type="button" class="nav-item" data-page="profile">
+            <span aria-hidden="true">👤</span>
+            <span>Profil</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <button type="button" class="nav-item" id="darkModeButton">
+            <span aria-hidden="true">🌙</span>
+            <span>Dark Mode</span>
+          </button>
+
+          <div class="sidebar-user">
+            <div class="avatar">T</div>
+            <div>
+              <strong>Pelajar</strong>
+              <small>Level Pemula</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button type="button" class="mobile-menu" id="mobileMenu" aria-label="Buka menu">
+            ☰
+          </button>
+
+          <div class="page-title">
+            <h1 id="pageTitle">Dashboard</h1>
+            <p id="pageSubtitle">Mari lanjutkan perjalanan bahasa Jepangmu.</p>
+          </div>
+
+          <div class="top-actions">
+            <div class="streak">
+              🔥
+              <strong id="streakCount">1</strong>
+              <span>hari</span>
+            </div>
+
+            <div class="xp">
+              ⭐
+              <strong id="xpCount">0</strong>
+              <span>XP</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="page active" id="dashboard">
+          <div class="welcome-card">
+            <div class="welcome-text">
+              <span class="small-label">おかえりなさい！</span>
+              <h2>Selamat datang kembali! 👋</h2>
+              <p>
+                Belajar sedikit setiap hari dan tingkatkan kemampuan
+                bahasa Jepangmu.
+              </p>
+
+              <button type="button" class="primary-button" onclick="openLesson('hiragana')">
+                Mulai Belajar →
+              </button>
+            </div>
+
+            <div class="japanese-character">日本語</div>
+          </div>
+
+          <div class="section-title">
+            <h2>Progress Belajar</h2>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon purple">📖</div>
+              <div>
+                <span>Pelajaran</span>
+                <strong id="lessonCount">0</strong>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon orange">⭐</div>
+              <div>
+                <span>Total XP</span>
+                <strong id="dashboardXP">0</strong>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon green">🎯</div>
+              <div>
+                <span>Quiz Benar</span>
+                <strong id="correctCount">0</strong>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon blue">🔥</div>
+              <div>
+                <span>Streak</span>
+                <strong id="dashboardStreak">1 hari</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <h2>Mulai Belajar</h2>
+          </div>
+
+          <div class="learning-grid">
+            <div class="learning-card hiragana-card" onclick="openLesson('hiragana')">
+              <div class="card-symbol">あ</div>
+              <div class="card-content">
+                <span>Pelajaran 01</span>
+                <h3>Hiragana</h3>
+                <p>Pelajari huruf dasar bahasa Jepang.</p>
+              </div>
+              <span class="arrow">→</span>
+            </div>
+
+            <div class="learning-card katakana-card" onclick="openLesson('katakana')">
+              <div class="card-symbol">カ</div>
+              <div class="card-content">
+                <span>Pelajaran 02</span>
+                <h3>Katakana</h3>
+                <p>Pelajari huruf untuk kata asing.</p>
+              </div>
+              <span class="arrow">→</span>
+            </div>
+
+            <div class="learning-card kanji-card" onclick="openLesson('kanji')">
+              <div class="card-symbol">漢</div>
+              <div class="card-content">
+                <span>Pelajaran 03</span>
+                <h3>Kanji</h3>
+                <p>Pelajari kanji dasar, arti, dan cara bacanya.</p>
+              </div>
+              <span class="arrow">→</span>
+            </div>
+
+            <div class="learning-card vocabulary-card" onclick="openLesson('vocabulary')">
+              <div class="card-symbol">語</div>
+              <div class="card-content">
+                <span>Pelajaran 04</span>
+                <h3>Kosakata</h3>
+                <p>Perluas kosakata Jepang setiap hari.</p>
+              </div>
+              <span class="arrow">→</span>
+            </div>
+
+            <div class="learning-card quiz-card" onclick="openLesson('quiz')">
+              <div class="card-symbol">?</div>
+              <div class="card-content">
+                <span>Latihan Harian</span>
+                <h3>Quiz Jepang</h3>
+                <p>Uji kemampuanmu dengan soal yang terstruktur.</p>
+              </div>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="hiragana">
+          <div class="lesson-header">
+            <div>
+              <span class="small-label">PELAJARAN 01</span>
+              <h2>Hiragana</h2>
+              <p>
+                Hiragana adalah salah satu sistem tulisan utama dalam bahasa Jepang.
+              </p>
+            </div>
+
+            <div class="lesson-progress">
+              <span>Progress</span>
+              <div class="progress-bar">
+                <div id="hiraganaProgressBar" style="width: 0%"></div>
+              </div>
+              <strong id="hiraganaProgressText">0%</strong>
+            </div>
+          </div>
+
+          <div class="alphabet-grid" id="hiraganaGrid">
+            <!-- Generated by JavaScript -->
+          </div>
+        </section>
+
+        <section class="page" id="katakana">
+          <div class="lesson-header">
+            <div>
+              <span class="small-label">PELAJARAN 02</span>
+              <h2>Katakana</h2>
+              <p>
+                Katakana biasanya digunakan untuk kata serapan dan nama asing.
+              </p>
+            </div>
+
+            <div class="lesson-progress">
+              <span>Progress</span>
+              <div class="progress-bar">
+                <div id="katakanaProgressBar" style="width: 0%"></div>
+              </div>
+              <strong id="katakanaProgressText">0%</strong>
+            </div>
+          </div>
+
+          <div class="alphabet-grid" id="katakanaGrid">
+            <!-- Generated by JavaScript -->
+          </div>
+        </section>
+
+        <section class="page" id="kanji">
+          <div class="lesson-header">
+            <div>
+              <span class="small-label">PELAJARAN 03</span>
+              <h2>Kanji</h2>
+              <p>
+                Pelajari Kanji dasar bahasa Jepang, arti, cara baca, dan contoh penggunaannya.
+              </p>
+            </div>
+
+            <div class="lesson-progress">
+              <span>Progress</span>
+              <div class="progress-bar">
+                <div id="kanjiProgressBar" style="width: 10%"></div>
+              </div>
+              <strong id="kanjiProgressText">10%</strong>
+            </div>
+          </div>
+
+          <div class="kanji-mode-toggle" aria-label="Pilihan mode kanji">
+            <button type="button" class="kanji-mode-button active" data-kanji-view="kanji">
+              Kanji
+            </button>
+          </div>
+
+          <div class="kanji-view-panel active" id="kanjiPanel">
+            <div class="kanji-toolbar">
+              <input
+                type="text"
+                id="kanjiSearch"
+                placeholder="🔍 Cari Kanji atau arti..."
+              />
+
+              <select id="kanjiLevel">
+                <option value="all">Semua</option>
+                <option value="N5">N5</option>
+                <option value="N4">N4</option>
+                <option value="mixed">Campuran</option>
+              </select>
+            </div>
+
+            <div class="kanji-summary" id="kanjiSummary">Semua level • 0 kanji</div>
+
+            <div class="kanji-grid" id="kanjiGrid">
+              <!-- Generated by JavaScript -->
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="vocabulary">
+          <div class="lesson-header">
+            <div>
+              <span class="small-label">PELAJARAN 03</span>
+              <h2>Kosakata</h2>
+              <p>
+                Pelajari kosakata Jepang yang sering digunakan dalam kehidupan sehari-hari.
+              </p>
+            </div>
+          </div>
+
+          <div class="vocabulary-toolbar">
+            <span class="toolbar-icon">🔎</span>
+            <input
+              type="text"
+              id="vocabularySearch"
+              placeholder="Cari kata, romaji, atau arti..."
+              aria-label="Cari kosakata"
+            />
+          </div>
+
+          <div class="vocabulary-grid" id="vocabularyGrid">
+            <!-- Generated by JavaScript -->
+          </div>
+        </section>
+
+        <section class="page" id="quiz">
+          <div class="quiz-container">
+            <div class="quiz-top">
+              <div>
+                <span class="small-label">LATIHAN</span>
+                <h2>Quiz Bahasa Jepang</h2>
+              </div>
+
+              <div class="quiz-score">
+                ⭐ <span id="quizXP">0</span> XP
+              </div>
+            </div>
+
+            <div class="quiz-progress">
+              <div>
+                Pertanyaan
+                <strong id="questionNumber">1</strong>
+                / 5
+              </div>
+
+              <div class="progress-bar">
+                <div id="quizProgressBar"></div>
+              </div>
+            </div>
+
+            <div class="question-card">
+              <span class="question-label">Apa arti huruf berikut?</span>
+              <div class="question-character" id="questionCharacter">あ</div>
+              <div class="answer-grid" id="answerGrid">
+                <!-- Generated by JavaScript -->
+              </div>
+              <div id="quizResult" class="quiz-result"></div>
+            </div>
+
+            <button
+              type="button"
+              class="next-button"
+              id="nextQuestionButton"
+              onclick="nextQuestion()"
+              disabled
+            >
+              Pertanyaan Berikutnya →
+            </button>
+          </div>
+        </section>
+
+        <section class="page" id="profile">
+          <div class="profile-shell">
+            <div class="profile-card profile-login-card">
+              <div class="profile-header">
+                <span class="small-label">PROFIL</span>
+                <h2>Masuk ke akun</h2>
+                <p>Kelola progres belajarmu dan lanjutkan perjalanan bahasa Jepang.</p>
+              </div>
+
+              <div class="auth-forms">
+                <form class="login-form auth-form active" id="loginForm">
+                  <div class="login-field-group">
+                    <label class="login-field active" data-login-field="gmail">
+                      <span>Alamat Gmail</span>
+                      <input id="profileEmail" type="email" placeholder="nama@gmail.com" required />
+                    </label>
+                  </div>
+
+                  <label>
+                    <span>Kata Sandi</span>
+                    <input id="profilePassword" type="password" placeholder="Masukkan kata sandi" required />
+                  </label>
+
+                  <div class="login-meta">
+                    <label class="checkbox-row">
+                      <input type="checkbox" checked />
+                      <span>Ingat saya</span>
+                    </label>
+
+                    <a href="#profile" aria-label="Lupa password">Lupa password?</a>
+                  </div>
+
+                  <button type="submit" class="primary-button login-button">Masuk</button>
+
+                  <div class="login-divider"><span>atau</span></div>
+
+                  <div class="provider-buttons" aria-label="Metode masuk lain">
+                    <button type="button" class="provider-button google" data-provider="Google">
+                      <span class="provider-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                          <path fill="#EA4335" d="M12 10.2v3.5h5.2c-.2 1.4-1.5 4-5.2 4-3.1 0-5.7-2.6-5.7-5.7s2.6-5.7 5.7-5.7c1.8 0 3.4.8 4.5 2.1l2.8-2.8C17.2 3.6 14.8 2.5 12 2.5 6.8 2.5 2.6 6.7 2.6 12s4.2 9.5 9.4 9.5c5.5 0 9.1-3.9 9.1-9.3 0-.6-.1-1.3-.2-1.9H12z"/>
+                          <path fill="#34A853" d="M3.7 7.3l3.3 2.4C7.8 9.7 9.7 9.1 12 9.1c1.8 0 3.4.8 4.5 2.1l2.8-2.8C17.2 3.6 14.8 2.5 12 2.5c-3.5 0-6.5 2-8.3 4.8z" opacity=".9"/>
+                          <path fill="#FBBC05" d="M3.7 16.7c1.7 2.8 4.7 4.8 8.3 4.8 2.8 0 5.1-1 6.8-2.7l-3.1-2.6c-.8.6-1.9 1-3.7 1-2.4 0-4.4-1.6-5.1-3.7l-3.2 2.2z" opacity=".9"/>
+                          <path fill="#4285F4" d="M12 2.5c2.7 0 5.1 1 6.8 2.9l2.7-2.7C17.2 1.1 14.7 0 12 0 7.8 0 4 2.4 2.1 5.8l3.2 2.5C6.1 5.7 8.4 2.5 12 2.5z" opacity=".9"/>
+                        </svg>
+                      </span>
+                      Google
+                    </button>
+                    <button type="button" class="provider-button gmail" data-provider="Gmail">
+                      <span class="provider-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                          <path fill="#EA4335" d="M4 6.5C4 5.7 4.7 5 5.5 5h13c.8 0 1.5.7 1.5 1.5v11c0 .8-.7 1.5-1.5 1.5h-13C4.7 19 4 18.3 4 17.5v-11zm2 .8 6 4.4 6-4.4H6zm12.2 1.6-5.8 4.3c-.4.3-1 .3-1.4 0L5.8 9l-.4.5v7.5c0 .2.1.3.3.3h13.2c.2 0 .3-.1.3-.3v-7.5L18.2 9z"/>
+                          <path fill="#fff" d="M6 10.1l6 4.5 6-4.5v7.4c0 .2-.1.3-.3.3H6.3c-.2 0-.3-.1-.3-.3v-7.4z" opacity=".9"/>
+                        </svg>
+                      </span>
+                      Gmail
+                    </button>
+                    <button type="button" class="provider-button facebook" data-provider="Facebook">
+                      <span class="provider-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
+                          <path fill="#1877F2" d="M13.5 22v-8h2.8l.4-3.2h-3.2V7.3c0-.9.3-1.6 1.7-1.6H17V2.7c-.3 0-1.3-.1-2.5-.1-2.4 0-4 1.5-4 4.3v2.4H8v3.2h2.5v8h3z"/>
+                        </svg>
+                      </span>
+                      Facebook
+                    </button>
+                  </div>
+
+                  <button type="button" class="secondary-button" id="openSignupButton">Daftar Gratis</button>
+
+                  <div id="loginMessage" class="login-message" aria-live="polite"></div>
+                </form>
+
+                <form class="signup-form auth-form" id="signupForm" novalidate>
+                  <div class="auth-header">
+                    <span class="small-label">DAFTAR</span>
+                    <h3>Buat akun baru</h3>
+                    <p>Mulai perjalanan belajar bahasa Jepangmu hari ini.</p>
+                  </div>
+
+                  <div class="signup-visual" aria-hidden="true">
+                    <div class="signup-orb orb-one"></div>
+                    <div class="signup-orb orb-two"></div>
+                    <div class="signup-character">日本語</div>
+                    <div class="signup-hero-card">
+                      <span class="signup-badge">✨</span>
+                      <div>
+                        <strong>Belajar lebih cepat</strong>
+                        <small>+500 kosakata · 20 quiz / hari</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="signup-progress" aria-label="Progress pendaftaran">
+                    <div class="signup-progress-track">
+                      <span class="signup-progress-fill" id="signupProgressFill"></span>
+                    </div>
+                    <div class="signup-progress-steps">
+                      <div class="signup-step-indicator is-active" data-step-indicator="0"><span>1</span>Data diri</div>
+                      <div class="signup-step-indicator" data-step-indicator="1"><span>2</span>Akun</div>
+                      <div class="signup-step-indicator" data-step-indicator="2"><span>3</span>Selesai</div>
+                    </div>
+                  </div>
+
+                  <div class="signup-steps">
+                    <div class="signup-step is-active" data-signup-step="0">
+                      <div class="form-grid">
+                        <label class="field-full">
+                          <span>Nama lengkap</span>
+                          <input id="signupName" type="text" placeholder="Masukkan nama lengkap" required />
+                        </label>
+
+                        <label class="field-full">
+                          <span>Email</span>
+                          <input id="signupEmail" type="email" placeholder="nama@email.com" required />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="signup-step" data-signup-step="1">
+                      <div class="form-grid">
+                        <label class="field-full">
+                          <span>Nomor handphone</span>
+                          <input id="signupPhone" type="tel" placeholder="08xxxxxxxxxx" required />
+                        </label>
+
+                        <label class="field-full">
+                          <span>Password baru</span>
+                          <input id="signupPassword" type="password" placeholder="Minimal 8 karakter" required />
+                        </label>
+
+                        <label class="field-full">
+                          <span>Ulang password</span>
+                          <input id="signupConfirmPassword" type="password" placeholder="Konfirmasi password" required />
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="signup-step" data-signup-step="2">
+                      <div class="signup-summary">
+                        <h4>Ringkasan akun</h4>
+                        <ul>
+                          <li><span>Nama</span><strong id="signupSummaryName">-</strong></li>
+                          <li><span>Email</span><strong id="signupSummaryEmail">-</strong></li>
+                          <li><span>Nomor HP</span><strong id="signupSummaryPhone">-</strong></li>
+                        </ul>
+                        <p>
+                          Dengan akun ini, kamu bisa mengakses kursus, menyimpan progress,
+                          dan mengikuti quiz setiap hari.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="signup-step-footer">
+                    <button type="button" class="secondary-button ghost-button hidden" id="signupPrevButton">Kembali</button>
+                    <button type="button" class="primary-button" id="signupNextButton">Lanjutkan</button>
+                    <button type="submit" class="primary-button signup-button hidden" id="signupSubmitButton">Daftar sekarang</button>
+                  </div>
+
+                  <button type="button" class="text-button" id="backToLoginButton">Sudah punya akun? Masuk</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="profile-card profile-summary">
+              <div class="profile-badge">T</div>
+              <h3 id="profileDisplayName">Pelajar</h3>
+              <p id="profileStatus">Belum masuk</p>
+
+              <ul class="profile-stats">
+                <li>
+                  <span>XP</span>
+                  <strong id="profileXP">0</strong>
+                </li>
+                <li>
+                  <span>Streak</span>
+                  <strong id="profileStreak">1 hari</strong>
+                </li>
+                <li>
+                  <span>Quiz benar</span>
+                  <strong id="profileCorrect">0</strong>
+                </li>
+              </ul>
+
+              <div class="profile-actions">
+                <button type="button" class="logout-button" id="logoutButton">Keluar</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      </main>
+    </div>
+
+    <div class="modal" id="characterModal">
+      <div class="modal-box">
+        <button type="button" class="close-modal" onclick="closeModal()" aria-label="Tutup modal">
+          ×
+        </button>
+
+        <span class="modal-label">HIRAGANA</span>
+
+        <div class="modal-character" id="modalCharacter">あ</div>
+        <h2 id="modalRomaji">A</h2>
+        <p id="modalExample">あさ — Asa</p>
+
+        <button type="button" class="sound-button" onclick="speakCharacter()">
+          🔊 Dengarkan
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
